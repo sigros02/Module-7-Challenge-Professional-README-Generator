@@ -56,33 +56,31 @@ const questions = [
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
   // Overwrite exsisting README file to create a clean README file
-  fs.writeFile(fileName, "", (err) =>
+  fs.writeFile(fileName, generateMarkdown(data), (err) =>
     err ? console.error(err) : console.log("Success!")
   );
   // 'a' = append mode <-- stream technique found at Chat GTP
   // Does not block the event loop (better for performance).
   // Efficient for multiple writes.
   // Avoids reopening the file on every write.
-  const stream = fs.createWriteStream(fileName, { flags: "a" });
-  stream.write(`${data.title}\n\n`);
-  stream.write(`${data.description}\n\n`);
-  stream.write(`${data.installation}\n\n`);
-  stream.write(`${data.usage}\n\n`);
-  stream.write(`${data.contribution}\n\n`);
-  stream.write(`${data.tests}\n\n`);
-  stream.write(`${data.license}\n\n`);
-  stream.write(`${data.github}\n\n`);
-  stream.write(`${data.email}\n\n`);
-  stream.end();
+  // const stream = fs.createWriteStream(fileName, { flags: "a" });
+  // stream.write(`${data.title}\n\n`);
+  // stream.write(`${data.description}\n\n`);
+  // stream.write(`${data.installation}\n\n`);
+  // stream.write(`${data.usage}\n\n`);
+  // stream.write(`${data.contribution}\n\n`);
+  // stream.write(`${data.tests}\n\n`);
+  // stream.write(`${data.license}\n\n`);
+  // stream.write(`${data.github}\n\n`);
+  // stream.write(`${data.email}\n\n`);
+  // stream.end();
 }
 
 // TODO: Create a function to initialize app
 function init() {
   inquirer.prompt(questions).then((response) => {
-    writeToFile(`README.me`, response);
-
-    // console.log(`
-    //   ${response.name}
+    writeToFile(`README.md`, response);
+    //   ${response.title}
     //   ${response.description}
     //   ${response.installation}
     //   ${response.usage}
