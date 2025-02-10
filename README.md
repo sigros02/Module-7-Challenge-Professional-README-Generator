@@ -1,34 +1,15 @@
-# 1<div align="right">[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)</div>
-  
-  ## Description
-  1
+# Professional README Generator
 
-  ## Table of Contents
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Contribution](#contribution)
-  - [Tests](#tests)
-  - [License](#license)
-  - [Questions](#questions)
+[Application Demo Video](https://drive.google.com/file/d/1hRhz8yz2ZQjpsgMwo6WrESbatNuvFTY6/view)
 
-  ## Installation
-  1
+## Description
 
-  ## Usage
-  1
+Build a professional level README file by answering a series of command line prompts.
 
-  ## Contribution
-  1
+## Installation
 
-  ## Tests
-  1
+Clone the repository to the local device where you want to run the application.
 
-  ## License
-  This project is licensed under the MIT license. Click the badge at the top of the README for more information.
-  
-  ## Questions
-  If you have any questions, please reach out to me on GitHub or via E-mail.  
-  E-mail: [email](mailto:email)  
-  Github: [user](url)
+## Usage
 
-
+Once you have cloned this application repository, start the application by opening the index.js in a terminal. Inside the terminal, type "npm run start". Add text when prompted for text based information. use the arrow keys to navigate and spacebar to select for the multiple the choice menu. Hit enter after submitting answers to each prompt. After the final prompt is completed, the application will generate the README file in the same folder directory as index.js.
